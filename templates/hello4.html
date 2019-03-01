@@ -1,0 +1,29 @@
+<!--            python manage.py runserver        -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8">
+    <title>你他媽第二個模版-顯示圖片</title>
+    {% load  staticfiles %}
+    <link href="{% static "css/style.css" %}" rel="stylesheet"
+       type="text/css" />
+</head>
+<body>
+    <div id ="home">
+        <img src="{% static "images/ball.png" %}" alt="幹沒圖片"
+          width="800" height="80"/><br>
+        <span class="info">歡迎官林:{{username}}</span>
+        <h2>現在時刻:{{now}}</h2>
+    </div>
+    <div id="container02" style="max-width:800px;height:400px"></div>
+        <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+        <script src="{% static "javascript/chart02.js" %}" type="text/JavaScript"></script>
+        <script src="{% static "javascript/chart01.js" %}" type="text/JavaScript"></script>
+    </div>
+    <div id="container" style="max-width:500px;height:400px"></div>
+        <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+        <script src="{% static "javascript/chart01.js" %}" type="text/JavaScript"></script>
+    </div>   
+
+</body>   
+</html>
